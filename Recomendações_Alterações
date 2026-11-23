@@ -1,6 +1,18 @@
-Tirar chaves estrangeiras (remover chaves estrangeiras desnecessárias)
-
-Colaborador só trabalha num estabelecimento
-
-Não é necessário estabelecimento_id, pois já é de uma empresa só
-
+Notas do Projeto
+Base de Dados
+￼ Tirar a chave estrangeira de ⁠Data_trabalho⁠.
+￼ Como o colaborador só trabalha num estabelecimento, remover as chaves estrangeiras desnecessárias.
+￼ Como o estabelecimento pertence a uma empresa, não preciso de ⁠EstabelecimentoId⁠ onde for redundante.
+￼ Tirar a pausa de picagem.
+￼ Se a tabela já tiver um ID único, tirar o resto das chaves estrangeiras porque não são necessárias.
+￼ Rever tudo o que tiver ID e chave estrangeira para limpar o que está a mais.
+￼ Criar um tipo de picagem manual nas picagens e remover as correções de picagens.
+￼ Mudar o nome da tabela ⁠push_subscricoes⁠ porque não faz sentido no contexto atual.
+Segurança e Dispositivos
+￼ Colocar estado ativo e inativo e permitir terminar sessão em dispositivos (por exemplo, caso roubem o tablet).
+￼ Meter autenticação em 2 passos com código de funcionário mais PIN para abrir.
+Android e Web
+￼ (Android) Meter uma label de notificação. A pessoa vai ter de ir a "Ver mais" ou "Opções" e tem lá troca de turno e aviso de turno, que depois aparecem no painel da gerência.
+￼ Códigos de barras: Retirar a leitura do web e passar para o Android, que é mais prático, e o Android envia os dados para o web.
+￼ Tanto o admin como os colaboradores têm a opção para ler códigos de barras na barra de opções.
+￼ Colocar uma soma das quantidades e permitir retirar quantidade depois.
