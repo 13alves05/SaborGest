@@ -1,26 +1,34 @@
 # Notas do Projeto
 
-# Base de Dados
+## Base de Dados
 
-- Tirar a chave estrangeira de ⁠Data_trabalho⁠
-- Como o colaborador só trabalha num estabelecimento, remover as chaves estrangeiras desnecessárias
-- Como o estabelecimento pertence a uma empresa, não preciso de ⁠EstabelecimentoId⁠ onde for redundante
+### Modelação e Chaves Estrangeiras
+- Remover a chave estrangeira de `Data_trabalho`.
+- Como o colaborador trabalha apenas num estabelecimento, remover chaves estrangeiras redundantes/desnecessárias.
+- Como o estabelecimento pertence a uma empresa, remover `EstabelecimentoId` onde for redundante.
+- Se uma tabela já tiver um ID único, avaliar e remover chaves estrangeiras desnecessárias.
+- Rever todas as tabelas com IDs e chaves estrangeiras para limpar redundâncias.
 
-# Tirar a pausa de picagem.
+### Picagens e Nomenclatura
+- Remover a pausa de picagem.
+- Criar um tipo de picagem manual nas picagens e remover as correções de picagens.
+- Renomear a tabela `push_subscricoes` para um nome mais adequado ao contexto atual.
 
-- Se a tabela já tiver um ID único, tirar o resto das chaves estrangeiras porque não são necessárias
-- Rever tudo o que tiver ID e chave estrangeira para limpar o que está a mais
-- Criar um tipo de picagem manual nas picagens e remover as correções de picagens
-- Mudar o nome da tabela ⁠push_subscricoes⁠ porque não faz sentido no contexto atual
+---
 
-# Segurança e Dispositivos
+## Segurança e Dispositivos
 
-- Colocar estado ativo e inativo e permitir terminar sessão em dispositivos (por exemplo, caso roubem o tablet, ou avaria do tablet, algo deste género)
-- Meter autenticação em 2 passos com código de funcionário mais PIN para abrir
+- Adicionar estados **ativo** e **inativo** aos dispositivos e permitir terminar sessão remotamente (ex.: em caso de roubo ou avaria de um tablet).
+- Implementar autenticação em 2 passos com **código de funcionário + PIN** para abrir/aceder.
 
-# Android e Web
+---
 
-- (Android) Meter uma label de notificação. A pessoa vai ter de ir a "Ver mais" ou "Opções" e tem lá troca de turno e aviso de turno, que depois aparecem no painel da gerência
-- Códigos de barras: Retirar a leitura do web e passar para o Android, que é mais prático, e o Android envia os dados para o web
-- Tanto o admin como os colaboradores têm a opção para ler códigos de barras na barra de opções
-- Colocar uma soma das quantidades e permitir retirar quantidade depois
+## Android e Web
+
+### Notificações e Turnos
+- **Android:** Adicionar uma *label* de notificação. O utilizador deverá aceder a *"Ver mais"* ou *"Opções"*, onde encontrará **troca de turno** e **aviso de turno**, ficando ambos visíveis no painel da gerência.
+
+### Códigos de Barras e Quantidades
+- Mover a leitura de códigos de barras da **Web** para o **Android** (mais prático no terreno), enviando os dados recolhidos para a Web.
+- Disponibilizar a opção de ler códigos de barras na barra de opções tanto para **admin** como para **colaboradores**.
+- Apresentar a **soma das quantidades** e permitir **retirar quantidade** posteriormente.
