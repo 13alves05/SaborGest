@@ -1,0 +1,6 @@
+Tirar chaves estrangeiras (remover chaves estrangeiras desnecessárias)
+
+Colaborador só trabalha num estabelecimento
+
+Não é necessário estabelecimento_id, pois já é de uma empresa só
+
